@@ -22,11 +22,10 @@ app.post("/resolver", async (req, res) => {
     
     if (data.queryresult.success) {
       const pods = data.queryresult.pods;
-      // console.log(pods);
 
-      const solutionPod = pods.find(pod => pod.title === "Result");
-      console.log(solutionPod);
-      console.log(pods);
+      const solutionPod = pods.find(pod => pod.id === "Solution" || pod.id === "Result");
+      // console.log(solutionPod);
+      // console.log(pods);
 
       if (solutionPod && solutionPod.subpods && solutionPod.subpods.length > 0) {
         res.json({ solucion: solutionPod.subpods[0].plaintext });
