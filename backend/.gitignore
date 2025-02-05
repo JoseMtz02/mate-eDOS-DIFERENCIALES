@@ -1,0 +1,30 @@
+# Node modules
+/node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build output
+/dist/
+/build/
+/tmp/
+/temp/
+
+# Dependency directories
+jspm_packages/
+
+# IDEs y editores
+.vscode/
+.idea/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Entornos de ejecución
+.env
+.env.local
+.env.*.local

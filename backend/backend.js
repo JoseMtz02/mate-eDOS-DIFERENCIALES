@@ -24,7 +24,7 @@ app.post("/resolver", async (req, res) => {
       const pods = data.queryresult.pods;
       console.log(pods);
 
-      const solutionPod = pods.find(pod => pod.title === "Plots of sample individual solution" || pod.title === "Sample solution family");
+      const solutionPod = pods.find(pod => pod.title === "Result" || pod.title === "Sample solution family");
       
       if (solutionPod && solutionPod.subpods && solutionPod.subpods.length > 0) {
         res.json({ solucion: solutionPod.subpods[0].plaintext });
