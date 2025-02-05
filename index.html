@@ -152,8 +152,12 @@
 
       const data = await response.json();
       
+
       if (data.solucion) {
-        return data.solucion;
+        console.log(data.solucion);
+        const sFinal = convertirALatex(data.solucion);
+        return sFinal;
+
       } else {
         return "No se pudo resolver la ecuación.";
       }
